@@ -37,7 +37,7 @@ const benefits = [
   },
   {
     title: "Validated Progress",
-    desc: "Regular tests and AI analytics to track every small improvement.",
+    desc: "Regular tests and detailed analytics to track every small improvement.",
     icon: TrendingUp,
     color: "bg-pink-500",
   }

@@ -8,14 +8,12 @@ import {
 import { db } from '../lib/firebase';
 import { doc, getDoc, collection, query, where, getDocs, limit, orderBy } from 'firebase/firestore';
 import PerformanceCharts from '../components/dashboard/PerformanceCharts';
-import AIMentalMathTrainer from '../components/ai/AIMentalMathTrainer';
 import { AnimatePresence } from 'motion/react';
 
 export default function DashboardPage({ user }: any) {
   const [profile, setProfile] = useState<any>(null);
   const [sessions, setSessions] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [showTrainer, setShowTrainer] = useState(false);
 
   useEffect(() => {
     if (!user) return;
@@ -69,15 +67,6 @@ export default function DashboardPage({ user }: any) {
               </p>
             </motion.div>
           </div>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setShowTrainer(true)}
-            className="w-full md:w-auto bg-primary text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center space-x-3 shadow-xl shadow-primary/20 hover:bg-primary-dark transition-all"
-          >
-            <Play size={20} className="fill-current" />
-            <span>Start Practice Session</span>
-          </motion.button>
         </div>
 
         {/* Stats Grid */}
@@ -164,37 +153,7 @@ export default function DashboardPage({ user }: any) {
 
           {/* Sidebar Area */}
           <div className="space-y-8">
-            {/* AI Insights Card */}
-            <div className="bg-slate-900 text-white p-8 rounded-[3rem] shadow-2xl relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/20 blur-3xl -z-0" />
-              <div className="relative z-10">
-                 <div className="flex items-center space-x-3 mb-6">
-                   <div className="p-2 bg-primary text-white rounded-xl">
-                      <Bot size={20} />
-                   </div>
-                   <h3 className="font-bold">AI Insights</h3>
-                 </div>
-                 
-                 <div className="space-y-4">
-                   <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
-                      <p className="text-xs italic text-slate-300">"Your speed on level 2 subtraction is improving! Keep focusing on carry-over operations."</p>
-                   </div>
-                   
-                   <div className="space-y-3">
-                     <p className="text-[10px] uppercase font-bold opacity-50 tracking-widest">Weak Areas</p>
-                     <div className="flex flex-wrap gap-2">
-                       <span className="text-[10px] bg-red-500/20 text-red-300 px-3 py-1 rounded-full border border-red-500/20 font-bold">Multiplication x9</span>
-                       <span className="text-[10px] bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full border border-orange-500/20 font-bold">Visualization</span>
-                     </div>
-                   </div>
 
-                   <button className="w-full bg-primary py-4 rounded-2xl font-bold flex items-center justify-center space-x-2 text-sm hover:bg-primary-dark transition-all">
-                     <span>Get Detailed Advice</span>
-                     <Sparkles size={16} />
-                   </button>
-                 </div>
-              </div>
-            </div>
 
             {/* Achievement Badges */}
             <div className="glass p-8 rounded-[3rem] border-white/50">
@@ -217,28 +176,7 @@ export default function DashboardPage({ user }: any) {
         </div>
       </div>
 
-      {/* Mental Math Trainer Modal */}
-      <AnimatePresence>
-        {showTrainer && (
-          <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setShowTrainer(false)}
-              className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden"
-            >
-              <AIMentalMathTrainer onClose={() => setShowTrainer(false)} studentId={user.uid} />
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+
     </div>
   );
 }

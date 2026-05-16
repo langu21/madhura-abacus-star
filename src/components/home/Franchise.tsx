@@ -3,7 +3,7 @@ import { Building2, PieChart, Users, CheckCircle, ArrowRight } from 'lucide-reac
 
 const benefits = [
   "Comprehensive Curriculum",
-  "AI Learning Management System",
+  "Digital Learning Management System",
   "National Branding & Marketing Support",
   "Teacher Training & Certification",
   "High Return on Investment",
@@ -21,7 +21,7 @@ export default function Franchise() {
               <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Partner With Us</p>
               <h2 className="text-4xl md:text-5xl font-extrabold mb-8">Start Your Own <br /> Educational Center</h2>
               <p className="text-slate-400 mb-10 leading-relaxed">
-                Join India's fastest-growing AI-powered educational network. Empower your community with world-class abacus training while building a profitable business.
+                Join India's fastest-growing educational network. Empower your community with world-class abacus training while building a profitable business.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
@@ -68,7 +68,7 @@ export default function Franchise() {
                 </button>
               </form>
               <p className="text-[10px] text-center mt-6 text-slate-500 uppercase tracking-widest font-black">
-                AI Growth Predictor Available on Inquiry
+                Growth Predictor Available on Inquiry
               </p>
             </motion.div>
           </div>

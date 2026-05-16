@@ -19,7 +19,6 @@ export default function Navbar({ user, darkMode, setDarkMode }: any) {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Courses', path: '/#courses' },
-    { name: 'AI Features', path: '/#ai-features' },
     { name: 'Franchise', path: '/#franchise' },
     { name: 'Contact', path: '/#contact' },
   ];

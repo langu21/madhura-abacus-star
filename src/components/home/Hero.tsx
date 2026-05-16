@@ -21,7 +21,7 @@ export default function Hero() {
         >
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6 border border-primary/20 backdrop-blur-sm">
             <Sparkles size={16} />
-            <span className="text-xs font-bold uppercase tracking-wider">AI-Powered Learning Academy</span>
+            <span className="text-xs font-bold uppercase tracking-wider">Advanced Learning Academy</span>
           </div>
           
           <div className="mb-4 inline-block bg-red-500 text-white px-6 py-1 rounded-full font-black text-xs uppercase tracking-[0.2em] shadow-lg shadow-red-500/20">
@@ -34,7 +34,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-lg leading-relaxed">
-            Madhura Abacus Star combines ancient mathematical wisdom with cutting-edge AI technology to develop concentration, memory, and superior mental math skills.
+            Madhura Abacus Star combines ancient mathematical wisdom with cutting-edge technology to develop concentration, memory, and superior mental math skills.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -88,22 +88,7 @@ export default function Hero() {
             />
           </div>
           
-          {/* Floating AI Widgets */}
-          <motion.div 
-            animate={{ y: [0, -20, 0] }}
-            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            className="absolute -top-10 -right-10 glass p-5 rounded-3xl shadow-xl z-20 hidden md:block"
-          >
-            <div className="flex items-center space-x-3">
-              <div className="p-3 bg-primary/20 text-primary rounded-2xl">
-                <Brain size={24} />
-              </div>
-              <div>
-                <p className="text-xs font-bold opacity-50">Brain Activity</p>
-                <p className="text-lg font-extrabold text-primary">High (98%)</p>
-              </div>
-            </div>
-          </motion.div>
+
 
           <motion.div 
             animate={{ y: [0, 20, 0] }}

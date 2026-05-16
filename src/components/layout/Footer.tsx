@@ -14,7 +14,7 @@ export default function Footer() {
             <span className="text-xl font-bold tracking-tighter">MADHURA STAR</span>
           </div>
           <p className="text-sm leading-relaxed">
-            Leading Abacus training institute dedicated to unlocking the potential of young brains through scientific methods and AI-powered learning.
+            Leading Abacus training institute dedicated to unlocking the potential of young brains through scientific methods and proven techniques.
           </p>
           <div className="flex space-x-4">
             {[Instagram, Facebook, Twitter, Youtube].map((Icon, i) => (
@@ -33,7 +33,7 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold mb-6">Quick Links</h4>
           <ul className="space-y-4">
-            {['About Us', 'AI Features', 'Courses', 'Franchise', 'Student Dashboard'].map((link) => (
+            {['About Us', 'Courses', 'Franchise', 'Student Dashboard'].map((link) => (
               <li key={link}>
                 <a href="#" className="text-sm hover:text-primary flex items-center group">
                   <ChevronRight size={14} className="mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />

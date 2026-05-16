@@ -6,21 +6,21 @@ const testimonials = [
   {
     name: "Priyanka Sharma",
     role: "Parent of 2 Students",
-    content: "The AI performance analyzer is a game changer. I can finally see clearly where my son is struggling and how he's improving every week. Highly recommended!",
+    content: "The performance analyzer is a game changer. I can finally see clearly where my son is struggling and how he's improving every week. Highly recommended!",
     rating: 5,
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Priyanka"
   },
   {
     name: "Dr. Arvind Mehta",
     role: "Educational Consultant",
-    content: "Madhura Star's approach to abacus is scientific and modern. The integration of AI for mental math practice makes it far superior to traditional classes.",
+    content: "Madhura Star's approach to abacus is scientific and modern. The integration of digital tools for mental math practice makes it far superior to traditional classes.",
     rating: 5,
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Arvind"
   },
   {
     name: "Sneha Kapur",
     role: "Mother of Junior Student",
-    content: "My daughter loves the interactive AI questions. It feels like a game to her, but her calculation speed has tripled in just 2 months!",
+    content: "My daughter loves the interactive questions. It feels like a game to her, but her calculation speed has tripled in just 2 months!",
     rating: 5,
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha"
   }

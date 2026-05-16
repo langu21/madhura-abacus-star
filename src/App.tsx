@@ -20,7 +20,6 @@ import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
-import AIChatAssistant from './components/ai/AIChatAssistant';
 
 export default function App() {
   const [user, setUser] = useState<any>(null);
@@ -71,7 +70,6 @@ export default function App() {
         </main>
 
         <Footer />
-        <AIChatAssistant />
       </div>
     </Router>
   );

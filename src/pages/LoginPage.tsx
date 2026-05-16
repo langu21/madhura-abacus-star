@@ -61,8 +61,8 @@ export default function LoginPage() {
           <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl shadow-primary/20">
             <Sparkles size={32} />
           </div>
-          <h1 className="text-3xl font-extrabold mb-3">Welcome Back</h1>
-          <p className="text-sm text-slate-500 font-medium">Unlock your AI-powered learning journey</p>
+          <h2 className="text-2xl font-bold">Welcome Back</h2>
+          <p className="text-sm text-slate-500 font-medium">Unlock your learning journey</p>
         </div>
 
         <div className="space-y-6">
@@ -88,8 +88,8 @@ export default function LoginPage() {
 
           <div className="space-y-4">
             {[
-              { icon: ShieldCheck, text: "Data encryption enabled" },
-              { icon: Sparkles, text: "AI features initialized on login" }
+              { icon: Sparkles, text: "Data sync across all devices" },
+              { icon: Sparkles, text: "Personalized learning dashboard" }
             ].map((item, i) => (
               <div key={i} className="flex items-center space-x-3 text-xs text-slate-500">
                 <item.icon size={14} className="text-primary" />
