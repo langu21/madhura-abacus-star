@@ -1,0 +1,11 @@
+{
+  "name": "Madhura Abacus Star - AI-Powered Brain Development",
+  "description": "A premium AI-powered education platform for abacus training, featuring mental math trainers, performance analyzers, and personalized learning paths.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

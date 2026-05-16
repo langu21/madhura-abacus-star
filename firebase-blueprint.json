@@ -1,0 +1,120 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Represents a student, parent, or admin in the system.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string", "enum": ["student", "parent", "admin"] },
+        "parentUid": { "type": "string", "description": "Reference to parent if user is a student" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "studentProfile": {
+          "type": "object",
+          "properties": {
+            "level": { "type": "number" },
+            "age": { "type": "number" },
+            "school": { "type": "string" }
+          }
+        }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Course": {
+      "title": "Course",
+      "description": "Educational courses offered by the institute.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "ageGroup": { "type": "string" },
+        "price": { "type": "number" },
+        "duration": { "type": "string" },
+        "imageUrl": { "type": "string" }
+      }
+    },
+    "MentalMathSession": {
+      "title": "Mental Math Session",
+      "description": "Results of an AI-powered mental math session.",
+      "type": "object",
+      "properties": {
+        "studentId": { "type": "string" },
+        "score": { "type": "number" },
+        "accuracy": { "type": "number" },
+        "speed": { "type": "number", "description": "Avg seconds per answer" },
+        "difficulty": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      }
+    },
+    "PerformanceMetric": {
+      "title": "Performance Metric",
+      "description": "AI analyzed performance metrics for a student.",
+      "type": "object",
+      "properties": {
+        "studentId": { "type": "string" },
+        "concentrationLevel": { "type": "number" },
+        "accuracyTrend": { "type": "array" },
+        "speedTrend": { "type": "array" },
+        "aiSuggestions": { "type": "array" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "FranchiseInquiry": {
+      "title": "Franchise Inquiry",
+      "description": "Leads generated for franchise interest.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "location": { "type": "string" },
+        "message": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "contacted", "closed"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "System or AI generated notifications for parents/students.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "type": { "type": "string" },
+        "read": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/courses/{courseId}": {
+      "schema": "Course",
+      "description": "Course catalog"
+    },
+    "/mentalMathSessions/{sessionId}": {
+      "schema": "MentalMathSession",
+      "description": "Activity logs for mental math"
+    },
+    "/performanceMetrics/{metricId}": {
+      "schema": "PerformanceMetric",
+      "description": "AI-generated analytics"
+    },
+    "/franchiseInquiries/{inquiryId}": {
+      "schema": "FranchiseInquiry",
+      "description": "Business leads"
+    },
+    "/notifications/{notificationId}": {
+      "schema": "Notification",
+      "description": "User alerts"
+    }
+  }
+}
